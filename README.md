@@ -29,7 +29,39 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-jirafixversioncreate--h-string--j-string--w-string--n-string--p-string--d-string--p-string--r-string--s---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
+## `sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+print a greeting and your org IDs
+
+```
+USAGE
+  $ sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r
+    <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+FLAGS
+  -d, --description=<value>                                                         name to print
+  -h, --host=<value>                                                                (required) name to print
+  -j, --jirausername=<value>                                                        (required) name to print
+  -n, --name=<value>                                                                (required) name to print
+  -p, --projectid=<value>                                                           (required) name to print
+  -p, --protocol=<value>                                                            [default: https] name to print
+  -r, --jiraapiversion=<value>                                                      [default: 2] name to print
+  -s, --strictssl                                                                   name to print
+  -w, --password=<value>                                                            (required) name to print
+  --json                                                                            format output as json
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+DESCRIPTION
+  print a greeting and your org IDs
+
+EXAMPLES
+  jira:fixversion:create --host expereo.atlassian.net --jirausername dieffrei.quadros@expereo.com --password YjmElfzTTnxiJC00RADm5272 --nam TestPONE --projectid ONE
+```
+
+_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.1/src/commands/jira/fixversion/create.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin

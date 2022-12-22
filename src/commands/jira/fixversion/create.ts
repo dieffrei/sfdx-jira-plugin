@@ -107,8 +107,7 @@ export default class Create extends SfdxCommand {
       name: this.flags.name,
       archived: false,
       released: false,
-      //"startDate": "2023-07-22",
-      project: "ONE",
+      project: this.flags.project,
     }).then((issue) => {
       this.ux.logJson(issue);
     })
