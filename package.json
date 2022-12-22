@@ -1,6 +1,6 @@
 {
   "name": "sfdx-jira-plugin",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "Diéffrei Tiepo de Quadros",
   "bugs": "https://github.com/workspace/sfdx-jira-plugin/issues",
   "dependencies": {
