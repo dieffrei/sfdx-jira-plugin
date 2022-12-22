@@ -21,7 +21,7 @@ $ npm install -g sfdx-jira-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (--version)
-sfdx-jira-plugin/0.0.1 darwin-arm64 node-v18.11.0
+sfdx-jira-plugin/0.0.2 darwin-arm64 node-v18.11.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -61,7 +61,7 @@ EXAMPLES
   jira:fixversion:create --host expereo.atlassian.net --jirausername dieffrei.quadros@expereo.com --password YjmElfzTTnxiJC00RADm5272 --nam TestPONE --projectid ONE
 ```
 
-_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.1/src/commands/jira/fixversion/create.ts)_
+_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.2/src/commands/jira/fixversion/create.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
