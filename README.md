@@ -21,7 +21,7 @@ $ npm install -g sfdx-jira-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (--version)
-sfdx-jira-plugin/0.0.4 darwin-arm64 node-v18.11.0
+sfdx-jira-plugin/0.0.5 darwin-arm64 node-v18.11.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -62,7 +62,7 @@ EXAMPLES
   jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE
 ```
 
-_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.4/src/commands/jira/fixversion/create.ts)_
+_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.5/src/commands/jira/fixversion/create.ts)_
 
 ## `sfdx jira:issue:update -h <string> -j <string> -w <string> -p <string> [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -92,7 +92,7 @@ EXAMPLES
   jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE
 ```
 
-_See code: [src/commands/jira/issue/update.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.4/src/commands/jira/issue/update.ts)_
+_See code: [src/commands/jira/issue/update.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.5/src/commands/jira/issue/update.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
