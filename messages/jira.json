@@ -4,6 +4,6 @@
   "forceFlagDescription": "example boolean flag",
   "errorNoOrgResults": "No results found for the org '%s'.",
   "examples": [
-    "jira:fixversion:create --host expereo.atlassian.net --jirausername dieffrei.quadros@expereo.com --password YjmElfzTTnxiJC00RADm5272 --nam TestPONE --projectid ONE"
+    "jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE"
   ]
 }
