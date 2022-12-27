@@ -21,7 +21,7 @@ $ npm install -g sfdx-jira-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (--version)
-sfdx-jira-plugin/0.0.5 darwin-arm64 node-v18.11.0
+sfdx-jira-plugin/0.0.6 darwin-arm64 node-v18.11.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -29,70 +29,37 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
-* [`sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-jirafixversioncreate--h-string--j-string--w-string--n-string--p-string--d-string--p-string--r-string--s---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
-* [`sfdx jira:issue:update -h <string> -j <string> -w <string> -p <string> [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-jiraissueupdate--h-string--j-string--w-string--p-string--p-string--r-string--s---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx jira:fixversion:create -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-jirafixversioncreate--n-string--p-string--d-string--p-string--r-string--s---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
-## `sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+## `sfdx jira:fixversion:create -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
-print a greeting and your org IDs
+Create fix version for a given project
 
 ```
 USAGE
-  $ sfdx jira:fixversion:create -h <string> -j <string> -w <string> -n <string> -p <string> [-d <string>] [-p <string>] [-r
-    <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+  $ sfdx jira:fixversion:create -n <string> -p <string> [-d <string>] [-p <string>] [-r <string>] [-s] [--json] [--loglevel
+    trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
 
 FLAGS
   -d, --description=<value>                                                         name to print
-  -h, --host=<value>                                                                (required) name to print
-  -j, --jirausername=<value>                                                        (required) name to print
   -n, --name=<value>                                                                (required) name to print
-  -p, --projectid=<value>                                                           (required) name to print
+  -p, --projectid=<value>                                                           (required) Project Id of jira
+                                                                                    project, E.g ONE, TRT, ANT
   -p, --protocol=<value>                                                            [default: https] name to print
   -r, --jiraapiversion=<value>                                                      [default: 2] name to print
   -s, --strictssl                                                                   name to print
-  -w, --password=<value>                                                            (required) name to print
   --json                                                                            format output as json
   --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
                                                                                     this command invocation
 
 DESCRIPTION
-  print a greeting and your org IDs
+  Create fix version for a given project
 
 EXAMPLES
   jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE
 ```
 
-_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.5/src/commands/jira/fixversion/create.ts)_
-
-## `sfdx jira:issue:update -h <string> -j <string> -w <string> -p <string> [-p <string>] [-r <string>] [-s] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
-
-print a greeting and your org IDs
-
-```
-USAGE
-  $ sfdx jira:issue:update -h <string> -j <string> -w <string> -p <string> [-p <string>] [-r <string>] [-s] [--json]
-    [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
-
-FLAGS
-  -h, --host=<value>                                                                (required) name to print
-  -j, --jirausername=<value>                                                        (required) name to print
-  -p, --projectid=<value>                                                           (required) name to print
-  -p, --protocol=<value>                                                            [default: https] name to print
-  -r, --jiraapiversion=<value>                                                      [default: 2] name to print
-  -s, --strictssl                                                                   name to print
-  -w, --password=<value>                                                            (required) name to print
-  --json                                                                            format output as json
-  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
-                                                                                    this command invocation
-
-DESCRIPTION
-  print a greeting and your org IDs
-
-EXAMPLES
-  jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE
-```
-
-_See code: [src/commands/jira/issue/update.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.5/src/commands/jira/issue/update.ts)_
+_See code: [src/commands/jira/fixversion/create.ts](https://github.com/workspace/sfdx-jira-plugin/blob/v0.0.6/src/commands/jira/fixversion/create.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
