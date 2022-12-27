@@ -103,19 +103,17 @@ export default class Create extends SfdxCommand {
 
     const jiraApi = new JiraApi(config);
 
-    jiraApi.createVersion({
+    let jiraFixVersion = null;
+    await jiraApi.createVersion({
       description: this.flags.description,
       name: this.flags.name,
       archived: false,
       released: false,
       project: this.flags.projectid,
     }).then((issue) => {
-      this.ux.logJson(issue);
-    })
-    .catch((err) => {
-      this.ux.logJson(err);
+      jiraFixVersion = issue;
     });
 
-    return {};
+    return jiraFixVersion;
   }
 }
