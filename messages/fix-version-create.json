@@ -1,7 +1,7 @@
 {
-  "commandDescription": "print a greeting and your org IDs",
+  "commandDescription": "Create fix version for a given project",
   "nameFlagDescription": "name to print",
-  "forceFlagDescription": "example boolean flag",
+  "projectIdFlagDescription": "Project Id of jira project, E.g ONE, TRT, ANT",
   "errorNoOrgResults": "No results found for the org '%s'.",
   "examples": [
     "jira:fixversion:create --host mycompany.atlassian.net --jirausername dieffrei@jira.com --password 1234545 --nam TestPONE --projectid ONE"

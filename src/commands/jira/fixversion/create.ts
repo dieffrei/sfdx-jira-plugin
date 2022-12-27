@@ -8,6 +8,7 @@ import * as os from 'os';
 import {flags, SfdxCommand} from '@salesforce/command';
 import {Messages} from '@salesforce/core';
 import {AnyJson} from '@salesforce/ts-types';
+import { env } from 'node:process';
 
 const JiraApi = require('jira-client');
 
@@ -16,7 +17,7 @@ Messages.importMessagesDirectory(__dirname);
 
 // Load the specific messages for this file. Messages from @salesforce/command, @salesforce/core,
 // or any library that is using the messages framework can also be loaded this way.
-const messages = Messages.loadMessages('sfdx-jira-plugin', 'jira');
+const messages = Messages.loadMessages('sfdx-jira-plugin', 'fix-version-create');
 
 interface JiraConfig {
   protocol: string;
@@ -35,21 +36,6 @@ export default class Create extends SfdxCommand {
   public static args = [{name: 'file'}];
 
   protected static flagsConfig = {
-    host: flags.string({
-      char: 'h',
-      required: true,
-      description: messages.getMessage('nameFlagDescription'),
-    }),
-    jirausername: flags.string({
-      char: 'j',
-      description: messages.getMessage('nameFlagDescription'),
-      required: true,
-    }),
-    password: flags.string({
-      char: 'w',
-      description: messages.getMessage('nameFlagDescription'),
-      required: true,
-    }),
     name: flags.string({
       char: 'n',
       required: true,
@@ -62,7 +48,7 @@ export default class Create extends SfdxCommand {
     projectid: flags.string({
       char: 'p',
       required: true,
-      description: messages.getMessage('nameFlagDescription'),
+      description: messages.getMessage('projectIdFlagDescription'),
     }),
     protocol: flags.string({
       char: 'p',
@@ -94,9 +80,9 @@ export default class Create extends SfdxCommand {
 
     const config: JiraConfig = {
       protocol: this.flags.protocol,
-      host: this.flags.host,
-      username: this.flags.jirausername,
-      password: this.flags.password,
+      host: env.JIRA_HOST,
+      username: env.JIRA_USER_NAME,
+      password: env.JIRA_PASSWORD,
       apiVersion: this.flags.jiraapiversion,
       strictSSL: this.flags.strictssl
     } as JiraConfig;
